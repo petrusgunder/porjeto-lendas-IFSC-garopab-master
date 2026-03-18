@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+
+/* Ajustes nas redes sociais */
+.interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.interface .logotipos{
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 0;
+}
+
+.interface .redes-sociais {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end; 
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.interface .redes-sociais button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #000;
+}
+
+.interface .redes-sociais button:hover {
+    color: rgb(0, 0, 90);
+}
+
+.redes-sociais {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.redes-sociais a button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 40px;
+}
+
+.redes-sociais a img {
+    width: 40px;
+    height: auto;
+}
+
+
+/* --- Menu Inferior --- */
+.parte-de-baixo-menu {
+    background-color: rgb(0, 0, 90);
+    
+}
+
+.parte-de-baixo-menu .interface {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.parte-de-baixo-menu ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.parte-de-baixo-menu .opcoes {
+    color: #fff;
+    padding: 20px 40px;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    transition: 0.1s;
+    text-align: left;
+}
+
+.parte-de-baixo-menu .opcoes:hover {
+    background-color: rgba(0, 0, 0, 0.76);
+    box-shadow: inset 0 0 8px hwb(0 0% 100% / 0.76);
+    transition: 0.5s;
+}
+
+.parte-de-baixo-menu ul li {
+    margin-right: 10px ;
+}
+
+.parte-de-baixo-menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+/* --- ESTILOS PARA DROPDOWN (LENDAS E CURTAS) --- */
+
+.menu-das-lendas, .menu-curtas {
+    position: relative;
+}
+
+.menu-das-lendas .droop, .menu-curtas .droop {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    /* Aumentado a largura para acomodar 3 colunas */
+    width: 900px; 
+    max-height: 0; 
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.95);
+    transition: max-height 0.3s ease-out;
+    z-index: 999;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0; 
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* CLASSE QUE SERÁ ADICIONADA/REMOVIDA VIA JAVASCRIPT */
+.menu-das-lendas .droop.show, .menu-curtas .droop.show {
+    max-height: 80vh; 
+    overflow-y: auto; 
+    padding: 15px;
+}
+
+
+/* --- ESTILOS DENTRO DO DROPDOWN PARA 3 ITENS POR LINHA --- */
+
+/* CONTAINER DE CADA LINHA: Deve ser FLEX e permitir QUEBRA */
+.lendas-hrf1 {
+    display: flex;
+    flex-wrap: wrap; /* ESSENCIAL: Permite que os cards quebrem para a próxima linha */
+    padding: 10px 0;
+    gap: 15px;
+    justify-content: flex-start;
+    width: 100%; 
+}
+
+/* O CARD INDIVIDUAL: Definir o tamanho para caber 3 por linha */
+.card-lenda {
+    position: relative;
+    display: inline-block;
+    /* Calcula a largura para 3 itens: (100% / 3) - espaçamento */
+    flex: 0 0 calc(33.33% - 10px); 
+    max-width: calc(33.33% - 10px); /* Garantia de largura máxima */
+    box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+}
+
+.card-lenda img {
+    width: 100%; /* A imagem ocupa 100% do card-lenda (1/3 da linha) */
+    height: auto;
+    border-radius: 5%;
+    display: block;
+}
+
+.card-lenda .texto-sobreposto {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    transform: none; 
+    padding: 5px;
+    width: 100%;
+    text-align: center; 
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0 0 5px 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.parte-de-baixo-menu .link-lendas button {
+    text-decoration: none;
+    font-family: "oswald", sans-serif;
+    font-size: 14px; 
+    cursor: pointer;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.2;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+.parte-de-baixo-menu .link-lendas button:hover {
+    font-size: 15px;
+    transition: 0.1s;
+    color: #fffb00;
+}
+/* --- ESTILOS PARA DROPDOWN SOBRE (SEM ALTERAÇÃO) --- */
+
+.menu-de-sobre {
+    position: relative;
+}
+
+.referencias h1{
+    font-size: 40px;
+    padding-top: 30px;
+    margin-left: 20px;
+}
+
+.referencias p{
+    font-size: 23px;
+    margin-left: 25px;
+    line-height: 2.5;
+}
+
+.livros li{
+    display: flex;
+    background-color: rgb(0, 0, 90);
+}
+
+.livros .imagem img{
+    border-radius: 50%;
+    overflow: hidden;
+    width: 90px;
+    height: 90px;
+    margin-left: 30px;
+    margin-top: 30px
+}
+
+.livros  .texto{
+    padding-top: 30px;
+    margin-left: 20px;
+    color: #fff;
+}
+
+.simple-footer {
+    width: 100%;
+    padding: 15px 0; 
+    background-color: #1a1a1a;
+    color: #eee; 
+    font-size: 0.9em;
+    text-align: center; 
+    font-family: Arial, sans-serif;
+}
+
+@media screen and (max-width: 1000px) {
+    /* Reduz a largura do droop para 2 colunas em telas menores */
+    .menu-das-lendas .droop, .menu-curtas .droop {
+        width: 600px; 
+    }
+    
+    .card-lenda {
+        /* Define a largura para 2 itens: (100% / 2) - espaçamento */
+        flex: 0 0 calc(50% - 7.5px); 
+        max-width: calc(50% - 7.5px);
+    }
+    
+    .o-projeto {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .o-projeto .textos {
+        font-size: 20px;
+    }
+
+    .o-projeto img {
+        width: 700px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .o-projeto img {
+        width: 400px;
+        height: auto;
+    }
+
+    .equipe ul li {
+        font-size: 15px;
+    }
+
+    .interface ul li a {
+        font-weight: 400;
+    }
+
+    /* Em mobile, volta para 1 coluna e largura menor do droop */
+    .menu-das-lendas .droop, .menu-curtas .droop {
+        width: 250px; 
+    }
+    
+    .card-lenda {
+        /* Define a largura para 1 item por linha */
+        flex: 0 0 100%; 
+        max-width: 100%;
+    }
+
+    .card-lenda .texto-sobreposto button {
+        padding: 3px 7px;
+        font-size: 12px;
+    }
+
+    .interface .opcoes {
+        font-size: 12px;
+    }
+
+    .lendas-hrf1 {
+        padding: 10px 0;
+        gap: 10px;
+    }
+
+    .o-projeto .imagems img{
+        margin-left: 100px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    .menu-curtas .droop .card-lenda{
+        position: relative;
+        display: inline-block;
+        flex: 0 0 calc(50% - 10px); 
+        max-width: calc(50% - 10px); /* Garantia de largura máxima */
+        box-sizing: border-box; /* Inclui padding e borda no cálculo da largura */
+        padding: 30px;
+    }
+
+    .menu-curtas .droop img{
+        width: 200px;
+        height: auto;
+        padding: 10px;
+    }
+
+    .menu-curtas .droop .texto-sobreposto{
+        padding: 15px;
+        width: 200px;
+        margin-left: 20px;
+    }
+    
+    
+
+    .menu-curtas .droop{
+        position: fixed; /* Fixa a div em relação à janela de visualização (viewport) */
+        top: 240px;          /* Alinha ao topo */
+        left: 0;         /* Alinha à esquerda */
+        width: 100%;     /* Opcional: ocupa toda a largura */
+        background-color: rgba(0, 0, 0, 0.671);
+        z-index: 100;
+    }
+
+    .nossos-curtas .card-lenda{
+        flex: 0 0 calc(50% - 10px); 
+        max-width: calc(50% - 10px);
+    }
+}
