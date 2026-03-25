@@ -178,7 +178,8 @@
 }
 
 .apresentar{
-    display: block;
+    display: inline-block;
+    position: relative;
 }
 
 
@@ -196,8 +197,6 @@
 
 /* O CARD INDIVIDUAL: Definir o tamanho para caber 3 por linha */
 .card-lenda {
-    position: relative;
-    display: inline-block;
     /* Calcula a largura para 3 itens: (100% / 3) - espaçamento */
     flex: 0 0 calc(33.33% - 10px); 
     max-width: calc(33.33% - 10px); /* Garantia de largura máxima */
@@ -209,6 +208,10 @@
     height: auto;
     border-radius: 5%;
     display: block;
+}
+
+.lendas-hrf1 a:hover{
+    color: #eeff00;
 }
 
 .card-lenda .texto-sobreposto {

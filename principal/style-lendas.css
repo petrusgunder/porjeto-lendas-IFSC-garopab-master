@@ -32,7 +32,7 @@
     margin-right: 20px;
 }
 
-.interface .redes-sociais a {
+.interface .redes-sociais a{
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -40,7 +40,7 @@
     color: #000;
 }
 
-.interface .redes-sociais a:hover {
+.interface .redes-sociais button:hover {
     color: rgb(0, 0, 90);
 }
 
@@ -118,6 +118,34 @@
     position: relative;
 }
 
+.menu-das-lendas .sub-menu{
+    background-color: rgba(49, 49, 49, 0.95);
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-das-lendas p{
+    font-size: 35px;
+    color: #fff;
+    margin-left: 20px;
+}
+
+.menu-das-lendas button{
+    color: #fff;
+    background-color: rgba(49, 49, 49, 0.95);
+    font-size: 20px;
+    border: none;
+    padding-left: 20px;
+    transition: 2.ms;
+    cursor: pointer;
+}
+
+.menu-das-lendas button:hover{
+    color: #eeff00;
+    font-size: 23px;
+}
+
 .menu-das-lendas .droop, .menu-curtas .droop {
     position: absolute;
     top: 100%;
@@ -145,6 +173,15 @@
     padding: 15px;
 }
 
+.card-lenda {
+    display: none;
+}
+
+.apresentar{
+    display: inline-block;
+    position: relative;
+}
+
 
 /* --- ESTILOS DENTRO DO DROPDOWN PARA 3 ITENS POR LINHA --- */
 
@@ -160,8 +197,6 @@
 
 /* O CARD INDIVIDUAL: Definir o tamanho para caber 3 por linha */
 .card-lenda {
-    position: relative;
-    display: inline-block;
     /* Calcula a largura para 3 itens: (100% / 3) - espaçamento */
     flex: 0 0 calc(33.33% - 10px); 
     max-width: calc(33.33% - 10px); /* Garantia de largura máxima */
@@ -173,6 +208,10 @@
     height: auto;
     border-radius: 5%;
     display: block;
+}
+
+.lendas-hrf1 a:hover{
+    color: #eeff00;
 }
 
 .card-lenda .texto-sobreposto {
@@ -215,6 +254,12 @@
 .menu-de-sobre {
     position: relative;
 }
+
+
+.menu_festival {
+    position: relative;
+}
+
 
 .texto{
     text-align: center;
